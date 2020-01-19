@@ -1,12 +1,9 @@
-<header>
-	<h1>Eat Da Burger!</h1>
-</header>
-
 <div class="wrapper">
+	<img src="../public/assets/images/burger.png" alt="Hamburger" id="hamburgerPic">
 	<div id="create-burger">
 		<form action="/" method="POST">
 			<input id="burger-name" type="text" name="burger_name" placeholder="Create a burger">
-			<button id="submit-btn" type="submit">Submit</button>
+			<button id="submit-btn" type="submit">Create The Bestest Burger</button>
 		</form>
 	</div>
 
@@ -17,7 +14,7 @@
 				{{#unless this.devoured}}
 				  <div class="burger">
 				    <form class="devour-burger-form" action="/{{id}}?_method=PUT" method="POST">
-				  		<button class="eat-btn">EAT</button>
+				  		<button class="eat-btn">Consume!</button>
 				    </form>
 						{{burger_name}} <span>#{{id}}</span>
 				  </div>
@@ -25,7 +22,7 @@
 			{{/each}}
 		</div>
 		<div id="burgers-devoured">
-			<h2>Burger's Eaten</h2>
+			<h2>Mass Quantities Consumed</h2>
 			{{#each burgers}}
 				{{#if this.devoured}}
 				  <div class="burger">{{burger_name}} <span>#{{id}}</span></div>

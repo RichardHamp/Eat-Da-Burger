@@ -24,24 +24,13 @@ router.post("/", function(req, res) {
 });
 
 //Put Request--Updates Table
-// router.put("/:id", function(req, res) {
-// 	console.log(req.params.id);
-// 	burger.updateOne(req.params.id, function() {
-// 		res.redirect("/");
-// 	});
-// })
 router.post("/:id", function (req, res) {
-    // holds burgers being devoured 
     var condition = "id = " + req.params.id;
     burger.updateOne({
-        // Use updateOne from burger.js
         devoured: req.body.devoured
-    }, condition, function () {
-        //redirects it to main page                         
+    }, condition, function () {                       
         res.redirect("/");
     });
 });
-
-
 
 module.exports = router;

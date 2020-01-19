@@ -1,3 +1,4 @@
+//Requirements & Variables
 const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
@@ -6,7 +7,7 @@ const cb = bodyParser.json();
 const PORT = process.env.PORT || 3000;
 var app = express();
 
-
+//Middleware
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cb);

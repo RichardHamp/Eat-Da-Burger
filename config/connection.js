@@ -1,5 +1,7 @@
-var mysql = require("mysql");
+//Requirements
+const mysql = require("mysql");
 
+//Connection with requirements for Heroku
 var connection;
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
@@ -13,6 +15,7 @@ if (process.env.JAWSDB_URL) {
 });
 };
 
+//Throws error or gives connected thread id
 connection.connect(function(err) {
     if (err) {
       console.error("error connecting: " + err.stack);
