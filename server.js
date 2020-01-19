@@ -1,28 +1,21 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-
-var PORT = process.env.PORT || 3000;
-
+const express = require("express");
+const bodyParser = require("body-parser");
+const exphbs = require("express-handlebars");
+const routes = require("./controllers/burgers_controller.js");
+const cb = bodyParser.json();
+const PORT = process.env.PORT || 3000;
 var app = express();
 
-// make public directory available - "serve" it
+
 app.use(express.static("public"));
-
-
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-// require & set up handlebars 
-var exphbs = require("express-handlebars");
-
+app.use(cb);
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-
-// import routes from controllers allowing  the server access 
-var routes = require("./controllers/burgers_controller.js");
-
 app.use(routes);
-
 app.listen(PORT, function() {
   console.log("App now listening at localhost:" + PORT);
 });
+
+// const routes = require("./controllers/burgers_controller.js"); app = express();
+// const routes = require("./controllers/burgers_controller.js"); PORT = process.env.PORT || 3000;
