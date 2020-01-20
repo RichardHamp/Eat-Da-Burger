@@ -1,14 +1,38 @@
-#burgerPic {
+@import url('https://fonts.googleapis.com/css?family=Notable&display=swap');
+
+body {
+	color: #333;
+	margin: 0;
+	background: rgb(255, 127, 0);
+}
+
+#burgerWrap {
+	text-align: center;
+}
+
+.burgerPic {
 	height: 200px;
 	width: 200px;
 }
 
-body {
-	color: #333;
-	font-family: Helvetica, Arial, sans-serif;
-	margin: 0;
-	background: #eee;
+#title{
+	font-size: 80px;
+	font-style: italic;
+	background-color: red;
+	animation: color-change 4s infinite;
+	border-style: double;
+	border-radius: 40px;
+	border-width: 10px;
+	border-color: yellow;
+	width: 100%;
 }
+
+@-webkit-keyframes color-change {
+    0% { color: black;}
+    50% { color: yellow; }
+    100% { color: black; }
+}
+
 
 header {
 	background: #333;
@@ -18,11 +42,11 @@ header {
 	align-items: center;
 }
 
-h1 {
+/* h1 {
 	margin: 0 0 0 100px;
 	color: #fff;
 	font-size: 30px;
-}
+} */
 
 span {
 	font-size: 0.85em;
@@ -100,3 +124,4 @@ h1 {
 	padding: 0.5em 1em 0.5em 1em;
 	font-size: 1.5em;
 }
+
