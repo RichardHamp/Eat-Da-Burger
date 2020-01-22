@@ -3,7 +3,8 @@
 Create a burger of your choosing before consuming it vorociously! This app will allow a user to create a burger which will appear in the available burger list. They may then click on a burger to transfer it over to the consumed list.
 
 ## Link
-
+GitHub: https://github.com/RichardHamp/Eat-Da-Burger
+Heroku: 
 
 ## Usage
 
