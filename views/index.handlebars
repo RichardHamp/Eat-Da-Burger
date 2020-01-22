@@ -18,6 +18,7 @@
 	<section id="burgers-container">
 		<div id="burgers-available">
 			<h2>Burgers Available</h2>
+			<br>
 			{{#each burgers}}
 			{{#unless this.devoured}}
 			<div class="burger">
@@ -30,7 +31,8 @@
 			{{/each}}
 		</div>
 		<div id="burgers-devoured">
-			<h2>Mass Quantities Consumed</h2>
+			<h1>Mass Quantities Consumed</h1>
+			<br>
 			{{#each burgers}}
 			{{#if this.devoured}}
 			<div class="burger">{{burger_name}} <span>#{{id}}</span></div>
