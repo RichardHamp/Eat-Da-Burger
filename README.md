@@ -4,7 +4,8 @@ Create a burger of your choosing before consuming it vorociously! This app will 
 
 ## Link
 GitHub: https://github.com/RichardHamp/Eat-Da-Burger
-Heroku: 
+
+Heroku: https://fierce-sea-19197.herokuapp.com/
 
 ## Usage
 
@@ -15,3 +16,7 @@ To use the app, simply type in a burger and hit "Create". Devour any or all avai
 - Node
 - Express
 - Handlebars
+- Heroku
+
+## Contributors
+Richard Hamp
